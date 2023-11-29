@@ -43,12 +43,20 @@ function HomePage() {
       if(data){
         dispatch(getTodoSuccessAction(data))
       }
+        else{
+          alert("No Favourite post added")
+          
+        }
+      
     }
 
     const handleLiked=()=>{
       const data=JSON.parse(localStorage.getItem("Liked"));
       if(data){
         dispatch(getTodoSuccessAction(data))
+      }
+      else{
+        alert("No post Liked")
       }
     }
 
@@ -75,8 +83,8 @@ function HomePage() {
   return load ? <Text fontSize={'40px'} as={'b'} >Loading...</Text> : (
     <div>
       <div style={{marginTop:"5%"}}>
-        <Text fontSize='50px' as='b' > Find your Favourite posts in Ctruh-App</Text>
-        <Text fontSize='30px' > 5 lakh+ posts for you to explore</Text>
+        <Text fontSize='50px' as='b' > Find your Favourite posts in CTRUH_app</Text>
+        <Text fontSize='30px' > 5K+ posts for you to explore</Text>
       </div>
 
       
